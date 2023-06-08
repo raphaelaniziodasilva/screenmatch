@@ -4,29 +4,31 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class PrincipalScreenmatch {
     public static void main(String[] args) {
-        // instanciando: criando um filme chamado meuFilme e tipando com Filme
-        Filme meuFilme = new Filme();
+        // instanciando: criando um filme chamado troia e tipando com Filme
+        Filme troia = new Filme();
         // atribuindo valores
-        meuFilme.setNome("Mafia");
-        meuFilme.setAnoDeLancamento(2021);
-        meuFilme.setIncluidoNoPlano(true);
-        meuFilme.setDuracaoEmMinutos(185);
-        System.out.println("Duraçao do filme " + meuFilme.getDuracaoEmMinutos());
+        troia.setNome("Troia");
+        troia.setAnoDeLancamento(2021);
+        troia.setIncluidoNoPlano(true);
+        troia.setDuracaoEmMinutos(185);
+        System.out.println("Duraçao do filme " + troia.getDuracaoEmMinutos());
 
         // chamando o metodo para imprimir os dados do filme
-        meuFilme.exibiFichaTecnica();
+        troia.exibiFichaTecnica();
 
         // dando avaliaçoes pro filme
-        meuFilme.avalia(8);
-        meuFilme.avalia(9);
-        meuFilme.avalia(8.5);
+        troia.avalia(8);
+        troia.avalia(9);
+        troia.avalia(8.5);
 
-        System.out.println("Total de avaliaçao " + meuFilme.getTotalDeAvaliacoes());
+        System.out.println("Total de avaliaçao " + troia.getTotalDeAvaliacoes());
 
         // media das avaliaçoes
-        System.out.println(meuFilme.pegaMedia());
+        System.out.println(troia.pegaMedia());
 
         System.out.println("#########################################################");
 
@@ -51,7 +53,7 @@ public class PrincipalScreenmatch {
         // criando uma calculadora
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         // adicionando os filmes e series
-        calculadora.inclui(meuFilme);
+        calculadora.inclui(troia);
         calculadora.inclui(TopGunMaverick);
         calculadora.inclui(lost);
         // fazendo a soma dos minutos dos filmes e series adicionado
@@ -59,7 +61,7 @@ public class PrincipalScreenmatch {
 
         // filtro de recomendaçoes
         FiltroDeRecomendacao filtro = new FiltroDeRecomendacao();
-        filtro.filtra(meuFilme);
+        filtro.filtra(troia);
         filtro.filtra(TopGunMaverick);
         filtro.filtra(lost);
 
@@ -70,6 +72,25 @@ public class PrincipalScreenmatch {
         episodio.setNumero(1);
         episodio.setTotalDeAvaliacoes(144);
         filtro.filtra(episodio);
+
+        var MegaShark = new Filme();
+        MegaShark.setNome("MegaShark");
+        MegaShark.setDuracaoEmMinutos(221);
+        MegaShark.setAnoDeLancamento(2023);
+        MegaShark.avalia(10);
+
+        // agora vamos criar uma lista de filmes
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(TopGunMaverick);
+        listaDeFilmes.add(troia);
+        listaDeFilmes.add(MegaShark);
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+
+        // antes de imprimir a lista de filmes vamos para o arquivo de filmes e sobreescrever o metodo toString
+        System.out.println(listaDeFilmes);
+
+
 
 
 

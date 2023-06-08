@@ -22,6 +22,15 @@ public class Titulo {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
     }
