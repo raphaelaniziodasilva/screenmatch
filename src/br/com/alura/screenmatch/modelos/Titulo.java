@@ -1,5 +1,4 @@
 package br.com.alura.screenmatch.modelos;
-
 public class Titulo {
     private String nome;
     private int anoDeLancamento;
@@ -7,6 +6,14 @@ public class Titulo {
     private double somaDasAvaliacao;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
+
+    // constructor
+    public Titulo(String nome, int anoDeLancamento, boolean incluidoNoPlano, int duracaoEmMinutos) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+        this.incluidoNoPlano = incluidoNoPlano;
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
 
     // metodos: comportamento
 

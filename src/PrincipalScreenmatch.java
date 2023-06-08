@@ -9,12 +9,13 @@ import java.util.ArrayList;
 public class PrincipalScreenmatch {
     public static void main(String[] args) {
         // instanciando: criando um filme chamado troia e tipando com Filme
-        Filme troia = new Filme();
+        Filme troia = new Filme("Trioa", 2022, true, 235, "MKV");
+
         // atribuindo valores
-        troia.setNome("Troia");
-        troia.setAnoDeLancamento(2021);
-        troia.setIncluidoNoPlano(true);
-        troia.setDuracaoEmMinutos(185);
+//        troia.setNome("Troia");
+//        troia.setAnoDeLancamento(2021);
+//        troia.setIncluidoNoPlano(true);
+//        troia.setDuracaoEmMinutos(185);
         System.out.println("Duraçao do filme " + troia.getDuracaoEmMinutos());
 
         // chamando o metodo para imprimir os dados do filme
@@ -33,22 +34,12 @@ public class PrincipalScreenmatch {
         System.out.println("#########################################################");
 
         // instanciando: criando uma serie chamado lost e tipando com Serie
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2007);
-        lost.exibiFichaTecnica();
-        lost.setTemporadas(3);
-        lost.setEpisodioPorTemporada(8);
-        lost.setMinutisPorEpisodio(22);
+        Serie lost = new Serie("Trioa", 2022, true, 235, 3,
+                true, 8, 44);
         System.out.println("Duraçao para maratonar lost " + lost.getDuracaoEmMinutos());
 
         // instanciando: criando um filme e tipando com Filme
-        Filme TopGunMaverick = new Filme();
-        // atribuindo valores
-        TopGunMaverick.setNome("Top Gun Maverick");
-        TopGunMaverick.setAnoDeLancamento(2022);
-        TopGunMaverick.setIncluidoNoPlano(true);
-        TopGunMaverick.setDuracaoEmMinutos(200);
+        Filme TopGunMaverick = new Filme("TopGunMaverick", 2022, true, 215, "MKV");
 
         // criando uma calculadora
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -73,10 +64,7 @@ public class PrincipalScreenmatch {
         episodio.setTotalDeAvaliacoes(144);
         filtro.filtra(episodio);
 
-        var MegaShark = new Filme();
-        MegaShark.setNome("MegaShark");
-        MegaShark.setDuracaoEmMinutos(221);
-        MegaShark.setAnoDeLancamento(2023);
+        var MegaShark = new Filme("MegaShark", 2022, false, 148, "MKV");
         MegaShark.avalia(10);
 
         // agora vamos criar uma lista de filmes

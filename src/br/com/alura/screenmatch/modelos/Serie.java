@@ -1,5 +1,4 @@
 package br.com.alura.screenmatch.modelos;
-
 import br.com.alura.screenmatch.calculos.Classificavel;
 
 public class Serie extends Titulo implements Classificavel {
@@ -7,6 +6,16 @@ public class Serie extends Titulo implements Classificavel {
     private boolean ativa;
     private int episodioPorTemporada;
     private int minutisPorEpisodio;
+
+    // constructor
+    public Serie(String nome, int anoDeLancamento, boolean incluidoNoPlano, int duracaoEmMinutos, int temporadas,
+        boolean ativa, int episodioPorTemporada, int minutisPorEpisodio) {
+        super(nome, anoDeLancamento, incluidoNoPlano, duracaoEmMinutos);
+        this.temporadas = temporadas;
+        this.ativa = ativa;
+        this.episodioPorTemporada = episodioPorTemporada;
+        this.minutisPorEpisodio = minutisPorEpisodio;
+    }
 
     public int getTemporadas() {
         return temporadas;
