@@ -4,7 +4,7 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
-public class Principal {
+public class PrincipalScreenmatch {
     public static void main(String[] args) {
         // instanciando: criando um filme chamado meuFilme e tipando com Filme
         Filme meuFilme = new Filme();
