@@ -48,6 +48,4 @@ public class Episodio implements Classificavel {
             return 3;
         }
     }
-
-
 }

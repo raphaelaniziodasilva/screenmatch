@@ -1,4 +1,7 @@
 package br.com.alura.screenmatch.principal;
+import br.com.alura.screenmatch.modelos.Titulo;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -29,7 +32,18 @@ public class PrincipalComBusca {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
         // imprimindo a resposta ou seja o body do response em json
-        System.out.println(response.body());
+        String json = response.body();
+        System.out.println(json);
+
+        // vamos utilizar o pacote lib gson que baixamos e colocamos na pasta de dependencia
+        // o Gson serve para Transfor um JSON em objeto
+        // declarando: instanciando o Gson
+        Gson gson = new Gson();
+        // vamos fazer a deserealização do titulo --> vamos pegar o json e transformar ele na classe titulo
+        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        // imprimindo o nome, para isso precisamos buscar pelo nome que esta em josn: Title, Yar e etc...
+        // vamos ter que fazer uma serealização: anotação no campos nome va para o arquivo titulo e faça essa serealização
+        System.out.println(meuTitulo);
 
     }
 }
