@@ -1,3 +1,4 @@
+package br.com.alura.screenmatch.principal;
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroDeRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -41,6 +42,8 @@ public class PrincipalScreenmatch {
         // instanciando: criando um filme e tipando com Filme
         Filme TopGunMaverick = new Filme("TopGunMaverick", 2022, true, 215, "MKV");
 
+        System.out.println("#########################################################");
+
         // criando uma calculadora
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         // adicionando os filmes e series
@@ -49,6 +52,8 @@ public class PrincipalScreenmatch {
         calculadora.inclui(lost);
         // fazendo a soma dos minutos dos filmes e series adicionado
         System.out.println(calculadora.getTempoTotal());
+
+        System.out.println("#########################################################");
 
         // filtro de recomendaçoes
         FiltroDeRecomendacao filtro = new FiltroDeRecomendacao();
@@ -63,6 +68,8 @@ public class PrincipalScreenmatch {
         episodio.setNumero(1);
         episodio.setTotalDeAvaliacoes(144);
         filtro.filtra(episodio);
+
+        System.out.println("#########################################################");
 
         var MegaShark = new Filme("MegaShark", 2022, false, 148, "MKV");
         MegaShark.avalia(10);
