@@ -35,15 +35,15 @@ public class PrincipalComBusca {
         String json = response.body();
         System.out.println(json);
 
-        // vamos utilizar o pacote lib gson que baixamos e colocamos na pasta de dependencia
-        // o Gson serve para Transfor um JSON em objeto
+//      vamos utilizar o pacote lib gson que baixamos e colocamos na pasta de dependencia
+//      o Gson serve para Transfor um JSON em objeto
         // declarando: instanciando o Gson
-        Gson gson = new Gson();
-        // vamos fazer a deserealização do titulo --> vamos pegar o json e transformar ele na classe titulo
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        // imprimindo o nome, para isso precisamos buscar pelo nome que esta em josn: Title, Yar e etc...
-        // vamos ter que fazer uma serealização: anotação no campos nome va para o arquivo titulo e faça essa serealização
-        System.out.println(meuTitulo);
+        // Gson gson = new Gson();
+//      vamos fazer a deserealização do titulo --> vamos pegar o json e transformar ele na classe titulo
+        //  Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+//       imprimindo o nome, para isso precisamos buscar pelo nome que esta em josn: Title, Yar e etc...
+//       vamos ter que fazer uma serealização: anotação no campos nome va para o arquivo titulo e faça essa serealização
+        // System.out.println(meuTitulo );
 
     }
 }
