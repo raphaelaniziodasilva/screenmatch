@@ -30,5 +30,6 @@ public class PrincipalComBusca {
                 .send(request, HttpResponse.BodyHandlers.ofString());
         // imprimindo a resposta ou seja o body do response em json
         System.out.println(response.body());
+
     }
 }
