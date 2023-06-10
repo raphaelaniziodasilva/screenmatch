@@ -1,0 +1,18 @@
+[
+  {
+    "Nome": "Superman",
+    "AnoDeLancamento": 1978,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 14
+  },
+  {
+    "Nome": "The Mummy",
+    "AnoDeLancamento": 1999,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 12
+  }
+]
